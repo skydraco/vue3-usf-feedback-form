@@ -1,4 +1,4 @@
-import { VueReCaptcha } from 'vue-recaptcha-v3';
-import FeedbackForm from './Feedback.vue';
+import { VueReCaptcha } from 'vue-recaptcha-v3'
+import FeedbackForm from './Feedback.vue'
 
-export { FeedbackForm, VueReCaptcha };
+export { FeedbackForm, VueReCaptcha }

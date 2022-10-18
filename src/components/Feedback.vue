@@ -90,8 +90,8 @@
 <script setup>
 import axios from 'axios';
 import { reactive, computed, watch, ref, toRefs  } from 'vue'
-import { useReCaptcha } from 'vue-recaptcha-v3'
 import { useI18n } from 'vue-i18n'
+import { useReCaptcha } from 'vue-recaptcha-v3'
 import '@/assets/sass/style.sass'
 
 const { locale, t } = useI18n();

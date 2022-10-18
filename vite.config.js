@@ -15,8 +15,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.js'),
-      name: 'SimpleModal',
-      fileName: (format) => `usf-feedback-form.${format}.js`,
+      name: 'FeedbackForm',
+      fileName: (format) => `vue3-usf-feedback-form.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
@@ -28,6 +28,9 @@ export default defineConfig({
           return `css/[name][extname]`;
         },
       },
+    },
+    commonjsOptions: {
+      esmExternals: true 
     },
   },
   plugins: [
