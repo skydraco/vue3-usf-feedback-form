@@ -1,0 +1,101 @@
+@import '@/assets/sass/_variables.sass'
+@import '@/assets/sass/_mixins.sass'
+
+.feedback-form
+    color: $color-black-100
+    font-family: $font-primary
+    font-size: 14px
+    @include sm
+        min-height: 450px
+        height: 100%
+        position: relative
+    &__header
+        font-size: 1.35em
+        font-weight: 700
+        line-height: 1em
+        margin-bottom: 2.75em
+    &__fields
+        display: flex
+        margin: 2em 0 0
+        @include sm
+            flex-direction: column
+            gap: 2em
+.field
+    width: 100%
+    position: relative
+    margin-left: 2em
+    @include sm
+        margin-left: unset
+    &:first-of-type
+        margin-left: 0
+    input, textarea
+        border: 0
+        border-bottom: 2px solid $color-grey-300
+        padding: 5px 5px 0 5px
+        z-index: 1
+        position: relative
+        background: transparent !important
+        &:focus
+            border-color: $color-grey-100
+    textarea
+        padding-top: 12px
+        resize: vertical
+        min-height: 150px
+        max-height: 300px
+        @include sm
+            height: 25vh
+    &.error
+        input, textarea
+            border-bottom: 1px solid $color-red-100
+        .placeholder
+            color: $color-red-100
+    &__error
+        color: $color-red-100
+        font-size: 11px
+        padding: 2px 2px 0
+.placeholder
+    position: absolute
+    top: 20px
+    transform: translateY(-50%)
+    color: $color-grey-600
+    margin: 0 5px
+    transition: .3s ease
+    z-index: 0
+    display: inherit
+    &_top
+        top: -7px
+        font-size: .95em
+        color: $color-black-100
+        margin: 0
+.feedback-confirm
+    margin-top: 3.5em
+    display: flex
+    @include sm
+        position: absolute
+        bottom: 0px
+    // Кнопка по умолчанию: class = uk-button uk-button-default
+    //button
+    //     color: $color-grey-600
+    //     white-space: nowrap
+    //     span
+    //         width: 18px
+    //         position: relative
+    //         top: -2px
+    //         left: -8px
+    //         margin-right: 2px
+    //     &:not([disabled]):hover 
+    //         background-color: transparent
+    //         color: $color-grey-700
+    //         border-color: $color-grey-400
+.feedback
+    &-message 
+        display: flex
+        flex-direction: column
+        padding: 0 20px
+        font-size: 11px
+        justify-content: center
+.message 
+    &-error
+        color: $color-red-100
+    &-success
+        color: $color-green-100
