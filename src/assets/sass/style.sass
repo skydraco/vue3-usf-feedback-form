@@ -16,7 +16,7 @@
         margin-bottom: 2.75em
     &__fields
         display: flex
-        margin: 2em 0 0
+        margin: 2.25em 0 0
         @include sm
             flex-direction: column
             gap: 2em
@@ -40,9 +40,9 @@
     textarea
         padding-top: 12px
         resize: vertical
-        min-height: 150px
+        min-height: 100px
         max-height: 300px
-        @include sm
+        @include sm 
             height: 25vh
     &.error
         input, textarea
@@ -73,6 +73,13 @@
     @include sm
         position: absolute
         bottom: 0px
+        flex-direction: column-reverse
+        gap: 20px
+        width: 100%
+        text-align: center
+    button
+        @include sm
+            width: 100%
     // Кнопка по умолчанию: class = uk-button uk-button-default
     //button
     //     color: $color-grey-600
@@ -94,6 +101,9 @@
         padding: 0 20px
         font-size: 11px
         justify-content: center
+        @include sm 
+            padding: 0
+            width: 100%
 .message 
     &-error
         color: $color-red-100

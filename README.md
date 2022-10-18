@@ -25,8 +25,8 @@ yarn add uikit
 ```js
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
-import { VueReCaptcha } from 'vue3-usf-feedback-form';
-import { messages } from "vue3-usf-feedback-form/locales/index.js"
+import { VueReCaptcha } from 'vue3-usf-feedback-form'
+import { messages } from 'vue3-usf-feedback-form/dist/locales/index.js'
 
 import 'vue3-usf-feedback-form/dist/css/style.css';
 import 'uikit'
