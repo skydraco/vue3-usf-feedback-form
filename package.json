@@ -1,6 +1,6 @@
 {
   "name": "vue3-usf-feedback-form",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./dist/usf-feedback-form.umd.js",
   "module": "./dist/usf-feedback-form.es.js",
   "style": "./dist/css/style.css",

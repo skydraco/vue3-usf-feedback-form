@@ -1,55 +1,62 @@
 
-# Simple modal form
+# USF Simple Feedback Form 
 
-Simple modal window based on Vue 3 and Vuex 4 for adding custom content
+Simple contact form for Vue 3 (name, email, message) + vue-i18n (ru, en, kr)
 
 
 ## Installation
 
-Install vue3-simple-modal-form with npm
+Install vue3-usf-feedback-form with npm
 
 ```bash
-  npm install vue3-simple-modal-form
+  npm install vue3-usf-feedback-form
 ```
 or using yarn
 ```bash
- yarn add vue3-simple-modal-form
+ yarn add vue3-usf-feedback-form
 ```
-    
-### Browser
-Include the script file, e.g.:
+
+optional: install uikit with npm
+```bash
+yarn add uikit
+````
 ### Module
+`./main.js`:
 ```js
-import { SimpleModal } from 'vue3-simple-modal-form';
-import 'vue3-simple-modal-form/dist/style.css';
-import { useStore } from 'vuex'
+import { createApp } from 'vue'
+import { createI18n } from 'vue-i18n'
+import { VueReCaptcha } from 'vue3-usf-feedback-form';
+import { messages } from "vue3-usf-feedback-form/locales/index.js"
 
-const store = useStore();
-```
-## Settings
-Import modal form states:
-```js
-import { createStore } from 'vuex';
-import SimpleModalStore from 'vue3-simple-modal-form/dist/storage';
+import 'vue3-usf-feedback-form/dist/css/style.css';
+import 'uikit'
+import 'uikit/dist/css/uikit.min.css'
 
-const store = createStore({
-    modules: {
-        ...
-        modal: SimpleModalStore
-    }
-});
+//ru, en, kr
+localStorage.setItem('locale', 'ru');
+
+const i18n = createI18n({
+    locale: localStorage.getItem('locale') || 'ru',
+    fallbackLocale: 'en',
+    legacy: false,
+    messages
+})
+
+createApp(App)
+    .use(i18n)
+    .use(VueReCaptcha, { siteKey: '<site key>' })
+    .mount('#app');
 ```
 ## Using
 Once installed, it can be used in a template as simply as:
-```vue
-<SimpleModal>
-    <div class="my-class">
-        Hellow, world!
-    </div>
-</SimpleModal>
-```
-```vue
-<button @click="store.commit('modal/CALL_MODAL', true)">
-    Open modal window
-</button>
+```html
+<script setup>
+    import { FeedbackForm } from 'vue3-usf-feedback-form';
+</script>
+
+<feedback-form 
+    :postRequest="postRequest"
+    :showErrorDetail="showErrorDetail"
+    :rowsTextarea="rowsTextarea"
+/>
 ```
