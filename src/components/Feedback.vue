@@ -62,7 +62,7 @@
 
         <div class="feedback-confirm">
             <button
-                class="button button-primary"
+                class="button button-primary button-solid"
                 @click="recaptcha"
             >
                <span uk-spinner v-if="!enabled"></span>

@@ -1,6 +1,6 @@
 {
   "name": "vue3-usf-feedback-form",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "main": "./dist/vue3-usf-feedback-form.umd.js",
   "module": "./dist/vue3-usf-feedback-form.es.js",
   "style": "./dist/css/style.css",
@@ -27,9 +27,7 @@
     "vite-plugin-static-copy": "^0.9.0",
     "vite-svg-loader": "^3.6.0",
     "vue": "^3.2.38",
-    "vue-i18n": "^9.2.2"
-  },
-  "dependencies": {
+    "vue-i18n": "^9.2.2",
     "vue-recaptcha-v3": "^2.0.1"
   }
 }
