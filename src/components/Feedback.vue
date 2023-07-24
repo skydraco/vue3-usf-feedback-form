@@ -69,7 +69,6 @@
                {{ $t('feedbackButton') }}
             </button>
             
-
             <div class="feedback-message message-success" v-if="success">
                 <strong>
                     <span>{{ $t('feedbackStatusSuccess') }}</span>

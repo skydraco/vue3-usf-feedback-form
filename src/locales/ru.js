@@ -3,7 +3,7 @@ export const ru = {
     feedbackName: 'Укажите имя',
     feedbackEmail: 'Укажите почту',
     feedbackMessage: 'Ваше сообщение',
-    feedbackButton: 'Написать нам',
+    feedbackButton: 'Отправить',
     feedbackStatusSuccess: 'Готово!',
     feedbackMessageSuccess: ' Сообщение успешно отправлено.',
     feedbackStatusError: 'Произошла ошибка!',
