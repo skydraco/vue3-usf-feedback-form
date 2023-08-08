@@ -64,6 +64,7 @@
             <button
                 class="button button-primary button-solid"
                 @click="recaptcha"
+                :disabled="isDisabled"
             >
                <span uk-spinner v-if="!enabled"></span>
                {{ $t('feedbackButton') }}
@@ -99,6 +100,7 @@ const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
 const props = defineProps({
 	  rowsTextarea: Number,
      showErrorDetail: Boolean,
+     sendEmptyFields: Boolean,
      postRequest: String,
 });
 
@@ -116,6 +118,10 @@ const data =  reactive({
 });
 
 const { errors, success, model, enabled, duration } = toRefs(data)
+
+const isDisabled = computed(() => {
+   return !props.sendEmptyFields && !data.model.name || !data.model.email || !data.model.message;
+});
 
 const inputs = computed(() => {
    if (data.errors && data.errors.inputs) {
