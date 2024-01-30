@@ -25,10 +25,10 @@ npm install uikit || yarn add uikit
 ```js
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
-import { VueReCaptcha } from 'vue3-usf-feedback-form'
-import { messages } from 'vue3-usf-feedback-form/dist/locales/index.js'
+import { VueReCaptcha } from '@ubrand/feedback-form-vue3'
+import { messages } from '@ubrand/feedback-form-vue3/dist/locales/index.js'
 
-import 'vue3-usf-feedback-form/dist/css/style.css';
+import '@ubrand/feedback-form-vue3/dist/css/style.css';
 import 'uikit'
 import 'uikit/dist/css/uikit.min.css'
 
@@ -51,7 +51,7 @@ createApp(App)
 Once installed, it can be used in a template as simply as:
 ```html
 <script setup>
-    import { FeedbackForm } from 'vue3-usf-feedback-form';
+    import { FeedbackForm } from '@ubrand/feedback-form-vue3';
 </script>
 
 <feedback-form 
