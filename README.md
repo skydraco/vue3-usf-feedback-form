@@ -1,24 +1,24 @@
 
-# USF Simple Feedback Form 
+# Simple Feedback Form 
 
 Simple contact form for Vue 3 (name, email, message) + vue-i18n (ru, en, kr)
 
 
 ## Installation
 
-Install vue3-usf-feedback-form with npm
+Install @ubrand/feedback-form-vue3 with npm
 
 ```bash
-  npm install vue3-usf-feedback-form
+  npm install @ubrand/feedback-form-vue3
 ```
 or using yarn
 ```bash
- yarn add vue3-usf-feedback-form
+ yarn add @ubrand/feedback-form-vue3
 ```
 
-optional: install uikit with npm
+Install UIkit package optionally with npm
 ```bash
-yarn add uikit
+npm install uikit || yarn add uikit
 ````
 ### Module
 `./main.js`:

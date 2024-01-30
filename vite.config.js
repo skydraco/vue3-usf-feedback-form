@@ -16,7 +16,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.js'),
       name: 'FeedbackForm',
-      fileName: (format) => `vue3-usf-feedback-form.${format}.js`,
+      fileName: (format) => `feedback-form-vue3.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

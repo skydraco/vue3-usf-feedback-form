@@ -1,8 +1,8 @@
 {
-  "name": "vue3-usf-feedback-form",
-  "version": "0.1.10",
-  "main": "./dist/vue3-usf-feedback-form.umd.js",
-  "module": "./dist/vue3-usf-feedback-form.es.js",
+  "name": "@ubrand/feedback-form-vue3",
+  "version": "1.0.1",
+  "main": "./dist/feedback-form-vue3.umd.js",
+  "module": "./dist/feedback-form-vue3.es.js",
   "style": "./dist/css/style.css",
   "files": [
     "dist"
@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/skydraco/vue3-usf-feedback-form.git"
   },
-  "author": "Denis",
+  "publishConfig":{
+    "registry":"https://npm.uniqom.ru"
+  },
+  "author": "Denis S.",
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
