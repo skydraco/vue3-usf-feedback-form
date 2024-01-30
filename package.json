@@ -1,6 +1,6 @@
 {
   "name": "@ubrand/feedback-form-vue3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./dist/feedback-form-vue3.umd.js",
   "module": "./dist/feedback-form-vue3.es.js",
   "style": "./dist/css/style.css",
